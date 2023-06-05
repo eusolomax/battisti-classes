@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <app-spinner *ngIf="spinnerTrigger"></app-spinner>
+
+  <p>Name quantity:
+    <input #nameQuantity type="number">
+  </p>
+
+  <button (click)="getData()">Click here to generate random name</button>
+  <h1>The name generated is: {{nameInDOM}}</h1>
+
+</body>
+</html>
