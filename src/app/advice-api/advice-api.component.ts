@@ -20,12 +20,12 @@ export class AdviceApiComponent {
   async adviceRequest(){
     this.disabledButtonF()
     this.spinnerTrigger = true
-    
-    const requestSend = await fetch('https://api.adviceslip.com/advice')
-    const result = await requestSend.json()
 
-    this.advice = result.slip.advice
+    fetch('https://api.adviceslip.com/advice')
+      .then(data => data.json())
+      .then(data => this.advice = data.slip.advice)
 
-    this.spinnerTrigger = false
+      .catch(err => console.log(err))
+      .finally(() => this.spinnerTrigger = false)
   }
 }
