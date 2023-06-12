@@ -1,0 +1,5 @@
+<app-spinner *ngIf="spinnerTrigger"></app-spinner>
+
+<button (click)="adviceRequest()" [disabled]="disabledButton">Get advice</button>
+
+<p>{{advice}}</p>
