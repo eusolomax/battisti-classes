@@ -6,6 +6,7 @@ import { CommandComponent } from './command/command.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { AdviceApiComponent } from './advice-api/advice-api.component';
 import { PromiseTestComponent } from './promise-test/promise-test.component';
+import { ApiFetchTestComponent } from './api-fetch-test/api-fetch-test.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PromiseTestComponent } from './promise-test/promise-test.component';
     CommandComponent,
     SpinnerComponent,
     AdviceApiComponent,
-    PromiseTestComponent
+    PromiseTestComponent,
+    ApiFetchTestComponent
   ],
   imports: [
     BrowserModule,
