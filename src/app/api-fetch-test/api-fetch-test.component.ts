@@ -8,10 +8,24 @@ import { FoxService } from '../services/fox.service';
 })
 export class ApiFetchTestComponent {
   foxImgUrl!: string
+  spinnerTrigger = false
+  buttonGetImage = false
 
   constructor(private foxService: FoxService){}
 
+  blockButton(){
+    this.buttonGetImage = true
+
+    setTimeout(() => {
+      this.buttonGetImage = false
+    }, 2000);
+  }
+
   async getImage(){
+    this.blockButton()
+
+    this.spinnerTrigger = true
     this.foxImgUrl = await this.foxService.requestImageURL()
+    this.spinnerTrigger = false
   }
 }

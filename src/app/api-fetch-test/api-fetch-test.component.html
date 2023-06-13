@@ -1,3 +1,5 @@
-<button (click)="getImage()">Get new fox!</button>
+<app-spinner *ngIf="spinnerTrigger"></app-spinner>
+
+<button (click)="getImage()" [disabled]="buttonGetImage">Get new fox!</button>
 
 <img style="height: 100px;" src="{{foxImgUrl}}">
